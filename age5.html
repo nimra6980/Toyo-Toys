@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <title>ToyoToys</title>
+    <link rel="icon" href="image/Toyo Toys.png" type="image/icon type">
+    <style>
+        .btn{
+    font-size:14px; border-radius:50%;margin-left: 20%; background-color: #db7558;border: 1px solid #db7558;
+}
+.btn:hover{
+    background:rgb(114, 181, 212);
+       border:1px  rgb(114, 181, 212);
+       color:beige;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(145, 145, 145);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #b9411f;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgb(240, 236, 236);
+}
+.vl {
+  border-left: 3px solid darksalmon ;
+  height:150%;
+  position: absolute;
+
+  margin-left: -3px;
+  top: 0;
+ 
+}
+.card{
+    position: relative;
+    overflow: hidden;
+}
+.card:before{
+position: absolute;
+content: '';
+width: 80%;
+height: 220%;
+background: rgba(161, 156, 156, 0.7);
+top:-50%;
+left: -100%;
+z-index: 1;
+transform: rotate(25deg);
+transform-origin: center top 0;
+transition: .5s;
+}
+.card:hover:before{
+    left: 50%;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card-text{
+    width: 100%;
+    padding: 0 20px;
+    position: absolute;
+    top: -100%;
+    color:#fff;
+    left: 2;
+    z-index: 2;
+    transition: 1.1s;
+}
+.card-text h3{
+    font-family: poppins;
+}
+.card:hover .card-text{
+    top: 0px;
+
+}
+    </style>
+</head>
+<body>
+    <div style="background-color:darksalmon;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 10px;">Free Return Free Shipping <span style="padding-left: 850px;"><i class="fa fa-phone"></i> +00 123 456 789      |   <i class="fa fa-envelope"></i> toyotoys@gmail.com  |  <i class="fa fa-user"></i>  account</span></div>
+
+     
+         
+     
+
+    <nav class="navbar navbar-expand-md nav-fixed-top  bg-white"id="navbar" >
+        <div class="navbar-header">
+        <a href="" class="navbar-brand mt-2 ml-4  " style="font-size: 30px; color:rgb(145, 90, 9)"><img src="image/Sparkle.png"width="100%" height="150px" alt=""></a>
+        </div>
+        
+        <div class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarcontent" aria-controls="navbarcontent">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+     
+        <div class="collapse navbar-collapse" id="navbarcontent">
+            
+       
+       
+        <ul class=" nav navbar-nav" style="margin-top: 5%;">
+            
+            <li class="nav-item " >
+                <a href="home.html" class="nav-link text-warning" style="font-size: medium;">Home</a>
+            </li>
+            <li class="nav-item ">
+                <a href="contactus.html" class="nav-link text-warning "style="font-size:medium;">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link  dropdown-toggle text-warning" data-toggle="dropdown"style="font-size: medium;">Age Group</a>
+                <ul class="dropdown-menu">
+                    <li><a href="age1.html"  class="dropdown-item"style="font-size: medium;">0-9 month</a>
+                    </li>
+                    <li>
+                   
+                        <a href="age2.html"  class="dropdown-item"style="font-size: medium;" >1-3 year</a>
+                    </li> 
+
+                     <li>
+                        <li><a href="age3.html"  class="dropdown-item"style="font-size: medium;">4-6 year</a>
+                        </li>
+                        <li>
+                       
+                            <a href="age4.html"  class="dropdown-item"style="font-size: medium;" >7-8 year</a>
+                        </li> 
+    
+                         <li>
+                            <li><a href="age5.html"  class="dropdown-item"style="font-size: medium;">9-11 year</a>
+                            </li>
+                          
+                 
+                </ul>
+
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.html" class="nav-link text-warning" style="font-size: medium;">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link  dropdown-toggle text-warning" data-toggle="dropdown"style="font-size: medium;">Brands</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Legacy.html"  class="dropdown-item"style="font-size: medium;">Legacy</a>
+                    </li>
+                    <li>
+                   
+                        <a href="dragerly1.html"  class="dropdown-item"style="font-size: medium;" >Dragerly</a>
+                    </li> 
+
+                          
+                 
+                </ul>
+
+            </li>
+        </ul>
+        <ul class=" nav navbar-nav" style="margin-left: 20%;margin-top: 5%;">
+            <li class="nav-item">
+                <a href="register.html" class="nav-link" style="font-size: 20px ;color: rgb(189, 116, 92);"><i class="fa fa-user"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="cart.html" class="nav-link" style="font-size: 20px;color: rgb(189, 116, 92);"><i class="fa fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" style="font-size: 20px;color: rgb(189, 116, 92);"><i class="fa fa-heart"></i></a>
+                    </li>
+            </ul>
+      
+            </div>
+    </nav>
+    <br>
+    <video autoplay loop muted src="image/10-11 years.mp4" width="100%" height="450px">
+</video>
+<div class="row">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12" style="margin-left: 10%;">
+                <h2>Brands:</h2>
+            </div>
+        </div>
+       
+    
+        <div class="row" style="margin-left: 10%;">
+            <div class="col-md-6" >
+              <h4>Dragerly</h4>
+            </div>
+            <div class="col-md-6 ">
+                <label class="container">
+                    <input type="radio" name="radio" onclick="window.location='dragerly1.html';">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            
+        </div>
+        <div class="row" style="margin-left: 10%;">
+            <div class="col-md-6" >
+              <h4>Legacy Toys</h4>
+            </div>
+            <div class="col-md-6 ">
+                <label class="container">
+                    <input type="radio" name="radio" onclick="window.location='Legacy.html';">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            
+        </div>
+      
+        <div class="row">
+        <div class="col-md-12" style="margin-left: 10%;">
+            <h2>Age Group:</h2>
+        </div>
+    </div>
+    <div class="row" style="margin-left: 10%;">
+        <div class="col-md-6" >
+          <h4>0-9 months</h4>
+        </div>
+        <div class="col-md-6 ">
+            <label class="container">
+                <input type="radio"  name="radio" onclick="window.location='age1.html';">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        
+    </div>
+    <div class="row" style="margin-left: 10%;">
+        <div class="col-md-6" >
+          <h4>1-3 </h4>
+        </div>
+        <div class="col-md-6 ">
+            <label class="container">
+                <input type="radio"  name="radio" onclick="window.location='age2.html';">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        
+    </div>
+    <div class="row" style="margin-left: 10%;">
+        <div class="col-md-6" >
+          <h4>4-6</h4>
+        </div>
+        <div class="col-md-6 ">
+            <label class="container">
+                <input type="radio"  name="radio" onclick="window.location='age3.html';">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        
+    </div>
+    <div class="row" style="margin-left: 10%;">
+        <div class="col-md-6" >
+          <h4>7-9</h4>
+        </div>
+        <div class="col-md-6 ">
+            <label class="container">
+                <input type="radio" name="radio" onclick="window.location='age4.html';">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        
+    </div>
+    <div class="row" style="margin-left: 10%;">
+        <div class="col-md-6" >
+          <h4>9-above</h4>
+        </div>
+        <div class="col-md-6 ">
+            <label class="container">
+                <input type="radio" checked="checked" name="radio" onclick="window.location='age5.html';">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        
+    </div>
+   
+    </div>
+    <div class="col-md-8">
+        <div class="row" style="margin-right: 10%;">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im19.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Legacy</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;"onclick="window.location='description13.html';" > <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f ;">$24.9</h1>
+                     </div>
+                
+                  </div>
+                  <div class="row"  style=" margin-left: 0%; " >
+                    <div class="col-md-12">
+                        <h4>Truck </h4>
+                    </div>
+                </div>
+                 
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im18.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Legacy</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;" onclick="window.location='description12.html';"> <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$10.6</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4>Shapes Toy</h4>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im17.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Legacy</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;"onclick="window.location='description11.html';" > <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$18.9</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4> Telescope</h4>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im16.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Legacy</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;"onclick="window.location='description10.html';" > <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$24.9</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4> Discovery Cow</h4>
+                     </div>
+                 </div>
+        </div>
+        </div>
+        <br>
+        <div class="row" style="margin-right: 10%;">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im15.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Dragerly</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;"onclick="window.location='description10.html';" > <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$17.9</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4> Discovery Fish</h4>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im14.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">      
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Dragerly</h3>
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;" onclick="window.location='description9.html';"> <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$10.8</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4>Discovery Dog </h4>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="image/im13.jpg"  width="100%" height="200px"alt="">
+                    <div class="card-text">   
+                        <h3 style="color:#fff
+                        ; background-color: #db7558; border: #db7558; border-radius: 20px; margin-left: 5px;"> Dragerly</h3>   
+                                <button class="btn" ><i class="fa fa-shopping-cart"></i></button>
+                      
+                            <button class="btn" style="margin-top: 5%;" onclick="window.location='description8.html';"> <i class="glyphicon glyphicon-zoom-in"></i></button>
+                     
+                                <button class="btn"style="margin-top: 5%;" ><i class="fa fa-heart"></i></button>
+                  
+                    </div>
+                </div>
+                 <div style="margin-left: 0%;" class="row">
+                    <div class="col-md-12"> <h1 style="color: #b9411f;">$14.9</h1>
+                     </div>
+                
+                  </div>
+                 <div class="row"  style=" margin-left: 0%; " >
+                     <div class="col-md-12">
+                         <h4> Telescope</h4>
+                     </div>
+                 </div>
+            </div>
+          
+        </div>
+        <br>
+        
+    </div>
+  
+</div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <img src="image/icon123.JPG" width="80%" height="120px" alt="" style="margin-left: 10%;">
+    <br>
+    <br>
+    <br>
+   
+   
+   
+<br>
+    <div style="background-image: url('cr4.jpg'); width: 100%; height: 170px;">
+       <footer class="footer-light" style="margin-top: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 10px;" >
+    <div class="footer-big">
+        <div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-about">
+                            <h1 text-white style=" border-bottom: 1px solid rgb(109, 211, 241); margin-left: 10%;">TOYO TOYS</h1>
+                            <ul class="contact-details" style="list-style-type: none;">
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>Call us:
+                                    <a href="">03312739892</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelop"></i>
+                                    <a href="">support@toyotoys.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+   
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="footer-menu">
+                            <h4 class="footer-widget-title" style="margin-left: 35px; border-bottom: 1px solid rgb(109, 211, 241);">Popular category:</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="dragerly1.html" class="text-dark" style="margin-left: 35px;" >Dragerly</a>
+                                </li>
+                                <li>
+                                    <a href="Legacy.html" class="text-dark" style="margin-left: 35px;">Legacy</a>
+                                </li>
+                               
+                                
+                            </ul>
+   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="footer-menu">
+                            <h4 class="footer-widget-title" style="margin-left: 35px; border-bottom: 1px solid rgb(109, 211, 241);">Our company:</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="aboutus.html" class="text-dark" style="margin-left: 35px;">About us</a>
+                                </li>
+                             
+                            </ul>
+   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="footer-menu">
+                            <h4 class="footer-widget-title" style="margin-left: 35px; border-bottom: 1px solid rgb(109, 211, 241);">Our support:</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="contactus.html" class="text-dark" style="margin-left: 35px;">Contact us</a>
+                                </li>
+                              
+                            </ul>
+   
+                        </div>
+                    </div>
+                </div>
+   
+            </div>
+        </div>
+    </div>
+    <div class="mini-footer" style="background-color: rgb(59, 117, 134);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text" style="color:rgb(245, 238, 238);margin-left: 40%;"><p>@2021toyotoys</a>   All rights reserved<br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </footer>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>
